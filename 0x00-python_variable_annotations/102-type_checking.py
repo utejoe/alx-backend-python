@@ -1,21 +1,38 @@
 #!/usr/bin/env python3
-'''Task 12's module.
-'''
+
+"""
+Type Checking
+
+This module defines a function zoom_array that takes a tuple and an optional integer factor as arguments. It returns a tuple by zooming in on the elements of the input list.
+
+"""
+
 from typing import List, Tuple
 
 
-def zoom_array(lst: Tuple, factor: int = 2) -> List:
-    '''Creates multiple copies of items in a tuple.
-    '''
+def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
+    """
+    Zoom Array
+
+    This function takes a tuple and an optional integer factor as arguments and returns a tuple by zooming in on the elements of the input list.
+
+    Args:
+        lst: A tuple of elements.
+        factor: An optional integer factor (default is 2).
+
+    Returns:
+        A tuple with zoomed-in elements.
+
+    """
     zoomed_in: List = [
         item for item in lst
-        for i in range(int(factor))
+        for _ in range(factor)
     ]
-    return zoomed_in
+    return tuple(zoomed_in)
 
 
-array = (12, 72, 91)
+array: List[int] = [12, 72, 91]
 
-zoom_2x = zoom_array(array)
+zoom_2x: Tuple = zoom_array(array)
 
-zoom_3x = zoom_array(array, 3)
+zoom_3x: Tuple = zoom_array(array, 3)
