@@ -5,10 +5,10 @@ import asyncio
 from random import uniform
 
 
-''' Write an asynchronous coroutine that takes in an integer
-    argument (max_delay, with a default value of 10) named
-    wait_random that waits for a random delay between 0 and
-    max_delay (included and float value) seconds and eventually returns it.
+'''
+    This module defines an asynchronous coroutine called wait_random,
+    which takes an integer argument (max_delay, default value of 10)
+    and returns a random delay between 0 and max_delay (inclusive).
 '''
 
 
